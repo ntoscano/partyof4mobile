@@ -5,6 +5,7 @@ var EventsStore = require('../stores/EventsStore');
 var UserStore = require('../stores/UserStore');
 var Constants = require('../constants/constants');
 
+var Back = require('../components/common').BackButton;
 var Header = require('../components/header');
 var EventInfo = require('./EventInfo');
 var HostView = require('./HostView');
@@ -141,6 +142,7 @@ var EventDetail = React.createClass({
     return (
       <View>
         <Header />
+        <Back onback={() => {}}/>
         <EventInfo 
           event={this.state.event}
           host={this.state.event.host} 
